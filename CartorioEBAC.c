@@ -156,7 +156,8 @@ int main(){
 	 printf(" Escolha a opção desejada:\n\n");
 	 printf("\t[1]- Registrar nomes \n");
 	 printf("\t[2]- Consultar nomes\n");
-	 printf("\t[3]- Apagar nomes\n\n\n"); //fim do menu
+	 printf("\t[3]- Apagar nomes\n");
+	 printf("\t[4]- Sair do menu\n\n\n"); //fim do menu
 	 printf("Opção: ");
 	
 	 scanf(" %d", &opcao);    //escanear o input, esse aq é o leitor de opções, ele armazena as info!
@@ -177,6 +178,11 @@ int main(){
 		 
 		 case 3:
 		 deletar();
+		 break;
+		 
+		 case 4:
+		 printf("Voce escolheu sair! Obrigado por utilizar o programa\n");
+		 return 0;
 		 break;
 		 
 		 default:
