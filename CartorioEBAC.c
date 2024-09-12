@@ -1,6 +1,6 @@
-#include <stdio.h> //comunicação com o usuario
+#include <stdio.h> //comunicaï¿½ï¿½o com o usuario
 #include <stdlib.h> 
-#include <locale.h> //alocação de texto por região
+#include <locale.h> //alocaï¿½ï¿½o de texto por regiï¿½o
 #include <string.h> //Biblioteca para strings 
 
 int registro(){
@@ -96,7 +96,7 @@ int consulta(){
     	
     	printf("Essas são as informações do usuario: \n\n");
     	
-    	subs = strtok(conteudo, ","); //string | limitação 
+    	subs = strtok(conteudo, ","); //string | limitaï¿½ï¿½o 
         printf("CPF: %s\n", subs);
         
         subs = strtok(NULL, ",");
@@ -144,11 +144,23 @@ int main(){
 	
 	int opcao=0;
 	int laco=1;
-	
+	char senhad[]="a";
+    int comp;
+    
+    setlocale(LC_ALL, "Portuguese");
+
+   printf("|--------------------------------|\n");
+   printf("| \t Cartório da EBAC \t | \n|--------------------------------|\n\n");
+   printf("Login de ADM!\n\n Digite sua senha:");
+   scanf("%s", senhad);
+
+  comp = strcmp(senhad, "admin");
+
+  if(comp == 0){
 	setlocale(LC_ALL, "Portuguese");
 	
-	while (laco == 1){   //  | entrada | saída | adicionar n de "loops"| 
-	 
+	while (laco == 1){   //  | entrada | saï¿½da | adicionar n de "loops"| 
+	 setlocale(LC_ALL, "Portuguese");
 	 system("cls"); 
 	
 	 printf("|--------------------------------|\n");
@@ -160,7 +172,7 @@ int main(){
 	 printf("\t[4]- Sair do menu\n\n\n"); //fim do menu
 	 printf("Opção: ");
 	
-	 scanf(" %d", &opcao);    //escanear o input, esse aq é o leitor de opções, ele armazena as info!
+	 scanf(" %d", &opcao);    //escanear o input, esse aq ï¿½ o leitor de opï¿½ï¿½es, ele armazena as info!
 	 system("cls"); 
 	   
 	 
@@ -186,11 +198,17 @@ int main(){
 		 break;
 		 
 		 default:
-		 printf("Essa opção não existe! \n");
+		 printf("Essa opção nï¿½o existe! \n");
 		 system("pause");
 		 break;
 		 
 		 
-	};
-  };   
+	  };
+   };
+  }  
+  else
+  {
+    printf("Senha incorreta!");
+    return 0;
+   } 
 };
