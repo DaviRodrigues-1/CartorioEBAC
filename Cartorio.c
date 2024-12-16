@@ -1,6 +1,6 @@
-#include <stdio.h> //comunica��o com o usuario
+#include <stdio.h> //comunicaï¿½ï¿½o com o usuario
 #include <stdlib.h> 
-#include <locale.h> //aloca��o de texto por regi�o
+#include <locale.h> //alocaï¿½ï¿½o de texto por regiï¿½o
 #include <string.h> //Biblioteca para strings 
 
 int registro(){
@@ -17,7 +17,7 @@ int registro(){
     
     FILE *file = fopen(arquivo, "r");
     if (file != NULL){
-        printf("Erro: O CPF %s j� est� registrado!\n\n", cpf);
+        printf("Erro: O CPF %s já está registrado!\n\n", cpf);
         fclose(file);
         system("pause");
         return 0; //se o cpf ja estiver registrado, ele volta para o inicio do menu.
@@ -88,15 +88,15 @@ int consulta(){
     
     if(file == NULL)
 	{
-    	printf("Esse CPF n�o est� cadastrado! \n");
+    	printf("Esse CPF não está cadastrado! \n");
     }
     
     while(fgets(conteudo, 200, file)!= NULL)
 	{
     	
-    	printf("Essas s�o as informa��es do usuario: \n\n");
+    	printf("Essas são as informações do usuario: \n\n");
     	
-    	subs = strtok(conteudo, ","); //string | limita��o 
+    	subs = strtok(conteudo, ","); //string | limitaï¿½ï¿½o 
         printf("CPF: %s\n", subs);
         
         subs = strtok(NULL, ",");
@@ -128,12 +128,12 @@ int deletar()
   	if(file == NULL)
 	{
 		system("cls"); 
-  		printf("Esse CPF n�o est� cadastrado no sistema!\n\n");	
+  		printf("Esse CPF não está cadastrado no sistema!\n\n");	
 	}
 	else
 	{
 		if(remove(cpf)==0){
-		printf("Usu�rio removido com sucesso!\n");
+		printf("Usuário removido com sucesso!\n");
 		}
 	}
 	system("pause");
@@ -150,7 +150,7 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
    printf("|--------------------------------|\n");
-   printf("| \t Cart�rio da EBAC \t | \n|--------------------------------|\n\n");
+   printf("| \t Cartório da EBAC \t | \n|--------------------------------|\n\n");
    printf("Login de ADM!\n\n Digite sua senha:");
    scanf("%s", senhad);
 
@@ -159,20 +159,20 @@ int main(){
   if(comp == 0){
 	setlocale(LC_ALL, "Portuguese");
 	
-	while (laco == 1){   //  | entrada | sa�da | adicionar n de "loops"| 
+	while (laco == 1){   //  | entrada | saï¿½da | adicionar n de "loops"| 
 	 setlocale(LC_ALL, "Portuguese");
 	 system("cls"); 
 	
 	 printf("|--------------------------------|\n");
-	 printf("| \t Cart�rio da EBAC \t | \n|--------------------------------|\n\n");
-	 printf(" Escolha a op��o desejada:\n\n");
+	 printf("| \t Cartório da EBAC \t | \n|--------------------------------|\n\n");
+	 printf(" Escolha a opção desejada:\n\n");
 	 printf("\t[1]- Registrar nomes \n");
 	 printf("\t[2]- Consultar nomes\n");
 	 printf("\t[3]- Apagar nomes\n");
 	 printf("\t[4]- Sair do menu\n\n\n"); //fim do menu
-	 printf("Op��o: ");
+	 printf("Opção: ");
 	
-	 scanf(" %d", &opcao);    //escanear o input, esse aq � o leitor de op��es, ele armazena as info!
+	 scanf(" %d", &opcao);    //escanear o input, esse aq ï¿½ o leitor de opï¿½ï¿½es, ele armazena as info!
 	 system("cls"); 
 	   
 	 
@@ -198,7 +198,7 @@ int main(){
 		 break;
 		 
 		 default:
-		 printf("Essa op��o n�o existe! \n");
+		 printf("Essa opção nï¿½o existe! \n");
 		 system("pause");
 		 break;
 		 
